@@ -1,0 +1,203 @@
+/* ==== ANIMACIÓN FADE IN UP ==== */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==== RESET + ESTILOS BASE ==== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  background: linear-gradient(to bottom right, #fef6ff, #e3f2fd);
+  color: #333;
+  padding: 2rem;
+}
+
+/* ==== ENCABEZADOS Y PÁRRAFOS ==== */
+header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #006aff;
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  margin-bottom: 1rem;
+  color: #006aff;
+}
+
+p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+/* ==== NAV ==== */
+#navegador {
+  width: 100vw;
+  background: linear-gradient(to right, #d0bfff, #cdb4db, #b5ead7);
+  padding: 1rem 0.5rem;
+  box-shadow: 0 8px 30px rgba(123, 44, 191, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(6px);
+  margin-left: -2rem;
+  margin-right: -2rem;
+}
+
+#navegador ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 0;
+  margin: 0;
+}
+
+#navegador li {
+  flex: 0 0 auto;
+}
+
+#navegador li a {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #5e548e;
+  padding: 0.5rem 1rem;
+  border-radius: 12px;
+  transition: all 0.3s ease-in-out;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(4px);
+  box-shadow: 0 4px 10px rgba(123, 44, 191, 0.1);
+  display: inline-block;
+  white-space: nowrap;
+}
+
+#navegador li a:hover {
+  background-color: #ffffffcc;
+  color: #026bfe;
+  transform: scale(1.07);
+  box-shadow: 0 6px 15px rgba(123, 44, 191, 0.2);
+}
+
+@media (max-width: 768px) {
+  #navegador ul {
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  #navegador li a {
+    font-size: 1rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
+
+/* ==== TARJETAS (CARD) CON ANIMACIÓN ==== */
+.card {
+  max-width: 900px;
+  margin: 0 auto 2rem;
+  background: white;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(123, 44, 191, 0.1);
+  transition: transform 0.3s ease;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s forwards;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+/* ==== ANIMACIÓN ESCALONADA PARA CARDS ==== */
+.card:nth-of-type(1) { animation-delay: 0.2s; }
+.card:nth-of-type(2) { animation-delay: 0.4s; }
+.card:nth-of-type(3) { animation-delay: 0.6s; }
+.card:nth-of-type(4) { animation-delay: 0.8s; }
+.card:nth-of-type(5) { animation-delay: 1s; }
+.card:nth-of-type(6) { animation-delay: 1.2s; }
+
+/* ==== ESTILOS DE FORMULARIOS ==== */
+input,
+textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  font-family: 'Quicksand', sans-serif;
+}
+
+button {
+  background-color: #7b2cbf;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #1182ec;
+}
+
+/* ==== FOOTER Y LISTAS ==== */
+footer {
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+ul {
+  margin-top: 1rem;
+  padding-left: 1.2rem;
+  list-style-type: none;
+}
+
+ul li {
+  margin-bottom: 0.5rem;
+}
+
+/* ==== BOTÓN "IR ARRIBA" ==== */
+#scrollTopBtn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #000000;
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  padding: 0.8rem 1rem;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(5, 105, 255, 0.3);
+  display: none;
+  z-index: 999;
+  transition: transform 0.3s;
+}
+
+#scrollTopBtn:hover {
+  transform: scale(1.1);
+}

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Aquí declaramos la codificación de caracteres -->
+  <meta charset="UTF-8" />
+  <!-- Esto hace que el sitio sea responsivo, se adapta a cualquier dispositivo -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portafolio | Fidel Sebastián</title>
+  <!-- Vinculamos el archivo CSS donde están los estilos -->
+  <link rel="stylesheet" href="estilo.css" />
+</head>
+
+<!-- Aquí va el botón para subir al inicio de la página -->
+<button id="scrollTopBtn" title="Ir arriba">🔝</button>
+
+<body>
+
+  <!-- Encabezado del sitio, lo que aparece al inicio -->
+  <header>
+
+    <!-- Menú de navegación -->
+    <nav id="navegador">
+      <ul>
+        <!-- Enlaces con una apariencia más estilizada -->
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#lenguajes">Lenguajes</a></li>
+        <li><a href="#futuros">Futuro</a></li>
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#motivacion">¿Por qué?</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+    
+
+    <!-- Título y bienvenida -->
+    <h1 id="inicio">🌟 Bienvenido a Mi Portafolio</h1>
+    <p>Un espacio creativo donde comparto mis ideas, proyectos y objetivos profesionales.</p>
+  
+  </header>
+
+  <!-- Sección de proyectos -->
+  <section class="card" id="proyectos">
+    <h2>🛠️ Proyectos Destacados</h2>
+    <ul>
+      <!-- Lista de proyectos, cada li es un proyecto -->
+      <li>🎮 Juego de dados en Python con interfaz gráfica</li>
+      <li>📊 Investigaciones contables bilingües (ES/EN)</li>
+      <li>🚀 Ideas y prototipos para emprendimiento en sistemas</li>
+    </ul>
+  </section>
+
+  <!-- Sección de lenguajes que domino -->
+  <section class="card" id="lenguajes">
+    <h2>💻 Lenguajes que Domino</h2>
+    <ul>
+      <!-- Lista de lenguajes de programación que manejo -->
+      <li>🐍 Python - Desarrollo de scripts, juegos y automatización</li>
+      <li>🌐 HTML - Estructura de páginas web</li>
+      <li>🎨 CSS - Estilización y diseño visual</li>
+      <li>📊 SQL solo por ensima - Consultas y gestión de bases de datos</li>
+    </ul>
+  </section>
+
+  <!-- Sección de futuros objetivos -->
+  <section class="card" id="futuros">
+    <h2>🔮 Próximos Objetivos</h2>
+    <ul>
+      <!-- Lista de cosas que quiero lograr pronto -->
+      <li>Finalizar y publicar mi juego en Python</li>
+      <li>Diseñar mi primera página web profesional desde cero</li>
+      <li>Configurar un servidor propio para alojar mis proyectos</li>
+    </ul>
+  </section>
+
+  <!-- Sección principal sobre mí -->
+  <main>
+    <section class="card" id="sobre-mi">
+      <h2>👋 Sobre mí</h2>
+      <p>Hola, soy Fidel Sebastián González Gutiérrez, estudiante de segundo semestre de Ingeniería en Sistemas. Este sitio representa mi interés por el desarrollo, el diseño y el emprendimiento. Me apasiona aprender y aplicar nuevas tecnologías en proyectos reales.</p>
+    </section>
+  
+    <!-- Motivos para hacer este portafolio -->
+    <section class="card" id="motivacion">
+      <h2>✨¿Por qué este portafolio?</h2>
+      <p>Estoy iniciando mi camino profesional y quiero destacar desde temprano. Me motiva crear proyectos que aporten valor y me ayuden a desarrollarme como programador y emprendedor.</p>
+    </section>
+
+    <!-- Sección de contacto -->
+    <section class="card" id="contacto">
+      <h2>📬 Contáctame</h2>
+      <p>¿Tienes una idea o deseas colaborar conmigo? ¡Estoy abierto a nuevas oportunidades!</p>
+      <!-- Formulario para enviar mensajes -->
+      <form action="mailto:240204016@tecnm.mx" method="post" enctype="text/plain">
+        <input type="text" name="name" placeholder="Tu nombre" required />
+        <br><br>
+        <input type="email" name="email" placeholder="Tu correo" required />
+        <br><br>
+        <textarea name="message" placeholder="Tu mensaje" rows="4" required></textarea>
+        <br><br>
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Pie de página -->
+  <footer>
+    <p>Hecho con 💜 por Fidel Sebastián González Gutiérrez &copy; 2025</p>
+  </footer>
+
+  <!-- Aquí va el código JavaScript para el botón que sube al principio -->
+  <script>
+    const scrollTopBtn = document.getElementById('scrollTopBtn');
+  
+    // Función que muestra el botón cuando haces scroll hacia abajo
+    window.onscroll = function () {
+      scrollTopBtn.style.display = (document.documentElement.scrollTop > 100) ? 'block' : 'none';
+    };
+  
+    // Al hacer clic en el botón, el navegador sube al principio de la página
+    scrollTopBtn.onclick = function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+  </script>
+
+</body>
+</html>
