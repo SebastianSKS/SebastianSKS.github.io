@@ -1,131 +1,132 @@
 /* ==== ANIMACIÓN FADE IN UP ==== */
 @keyframes fadeInUp {
   0% {
-    opacity: 0;
-    transform: translateY(20px);
+    opacity: 0; /* Empieza invisible */
+    transform: translateY(20px); /* Empieza 20px abajo */
   }
   100% {
-    opacity: 1;
-    transform: translateY(0);
+    opacity: 1; /* Termina visible */
+    transform: translateY(0); /* Termina en su posición normal */
   }
 }
 
 /* ==== RESET + ESTILOS BASE ==== */
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+  box-sizing: border-box; /* Hace que padding y border no afecten el tamaño total */
+  margin: 0; /* Quita márgenes predeterminados */
+  padding: 0; /* Quita relleno predeterminado */
 }
 
 body {
-  font-family: 'Quicksand', sans-serif;
-  background: linear-gradient(to bottom right, #fef6ff, #e3f2fd);
-  color: #333;
-  padding: 2rem;
+  font-family: 'Quicksand', sans-serif; /* Fuente principal */
+  background: linear-gradient(to bottom right, #fef6ff, #e3f2fd); /* Fondo degradado */
+  color: #333; /* Color de texto */
+  padding: 2rem; /* Espaciado interno */
 }
 
 /* ==== ENCABEZADOS Y PÁRRAFOS ==== */
 header {
-  text-align: center;
-  margin-bottom: 3rem;
+  text-align: center; /* Centra el contenido */
+  margin-bottom: 3rem; /* Margen abajo */
 }
 
 h1 {
-  font-size: 2.5rem;
-  color: #006aff;
-  margin-bottom: 0.5rem;
+  font-size: 2.5rem; /* Tamaño grande */
+  color: #006aff; /* Color azul */
+  margin-bottom: 0.5rem; /* Margen abajo */
 }
 
 h2 {
-  margin-bottom: 1rem;
-  color: #006aff;
+  margin-bottom: 1rem; /* Margen abajo */
+  color: #006aff; /* Color azul */
 }
 
 p {
-  font-size: 1.2rem;
-  color: #555;
-  margin-bottom: 1rem;
+  font-size: 1.2rem; /* Tamaño de texto mediano */
+  color: #555; /* Color gris */
+  margin-bottom: 1rem; /* Margen abajo */
 }
 
 /* ==== NAV ==== */
 #navegador {
-  width: 100vw;
-  background: linear-gradient(to right, #d0bfff, #cdb4db, #b5ead7);
-  padding: 1rem 0.5rem;
-  box-shadow: 0 8px 30px rgba(123, 44, 191, 0.15);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  backdrop-filter: blur(6px);
-  margin-left: -2rem;
-  margin-right: -2rem;
+  width: 100vw; /* Ancho completo del viewport */
+  background: linear-gradient(to right, #d0bfff, #cdb4db, #b5ead7); /* Fondo degradado */
+  padding: 1rem 0.5rem; /* Relleno */
+  box-shadow: 0 8px 30px rgba(123, 44, 191, 0.15); /* Sombra */
+  position: sticky; /* Se pega arriba al hacer scroll */
+  top: 0; /* Pegado al top */
+  z-index: 1000; /* Prioridad sobre otros elementos */
+  backdrop-filter: blur(6px); /* Desenfoque de fondo */
+  margin-left: -2rem; /* Ajuste izquierdo */
+  margin-right: -2rem; /* Ajuste derecho */
 }
 
 #navegador ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 2rem;
-  padding: 0;
-  margin: 0;
+  list-style: none; /* Quita viñetas */
+  display: flex; /* Flexbox */
+  justify-content: center; /* Centrado horizontal */
+  align-items: center; /* Centrado vertical */
+  flex-wrap: wrap; /* Permite saltos de línea */
+  gap: 2rem; /* Espacio entre elementos */
+  padding: 0; /* Sin relleno */
+  margin: 0; /* Sin margen */
 }
 
 #navegador li {
-  flex: 0 0 auto;
+  flex: 0 0 auto; /* No se encogen */
 }
 
 #navegador li a {
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 1.1rem;
-  color: #5e548e;
-  padding: 0.5rem 1rem;
-  border-radius: 12px;
-  transition: all 0.3s ease-in-out;
-  background: rgba(255, 255, 255, 0.3);
-  backdrop-filter: blur(4px);
-  box-shadow: 0 4px 10px rgba(123, 44, 191, 0.1);
-  display: inline-block;
-  white-space: nowrap;
+  text-decoration: none; /* Quita subrayado */
+  font-weight: 600; /* Negrita */
+  font-size: 1.1rem; /* Tamaño de texto */
+  color: #5e548e; /* Color del enlace */
+  padding: 0.5rem 1rem; /* Espaciado interno */
+  border-radius: 12px; /* Bordes redondeados */
+  transition: all 0.3s ease-in-out; /* Animaciones suaves */
+  background: rgba(255, 255, 255, 0.3); /* Fondo semi-transparente */
+  backdrop-filter: blur(4px); /* Desenfoque */
+  box-shadow: 0 4px 10px rgba(123, 44, 191, 0.1); /* Sombra suave */
+  display: inline-block; /* Comportamiento de bloque en línea */
+  white-space: nowrap; /* No se parte en varias líneas */
 }
 
 #navegador li a:hover {
-  background-color: #ffffffcc;
-  color: #026bfe;
-  transform: scale(1.07);
-  box-shadow: 0 6px 15px rgba(123, 44, 191, 0.2);
+  background-color: #ffffffcc; /* Fondo blanco más sólido al pasar el mouse */
+  color: #026bfe; /* Cambia el color del texto */
+  transform: scale(1.07); /* Agranda el enlace */
+  box-shadow: 0 6px 15px rgba(123, 44, 191, 0.2); /* Sombra más intensa */
 }
 
+/* ==== RESPONSIVE NAV ==== */
 @media (max-width: 768px) {
   #navegador ul {
-    gap: 1rem;
-    flex-wrap: wrap;
+    gap: 1rem; /* Menos espacio entre elementos */
+    flex-wrap: wrap; /* Permite salto de línea */
   }
 
   #navegador li a {
-    font-size: 1rem;
-    padding: 0.4rem 0.8rem;
+    font-size: 1rem; /* Texto más pequeño */
+    padding: 0.4rem 0.8rem; /* Menos padding */
   }
 }
 
 /* ==== TARJETAS (CARD) CON ANIMACIÓN ==== */
 .card {
-  max-width: 900px;
-  margin: 0 auto 2rem;
-  background: white;
-  border-radius: 20px;
-  padding: 2rem;
-  box-shadow: 0 10px 30px rgba(123, 44, 191, 0.1);
-  transition: transform 0.3s ease;
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 0.8s forwards;
+  max-width: 900px; /* Ancho máximo */
+  margin: 0 auto 2rem; /* Centrado y separación abajo */
+  background: rgb(255, 255, 255); /* Fondo blanco */
+  border-radius: 20px; /* Bordes redondeados */
+  padding: 2rem; /* Relleno interno */
+  box-shadow: 0 10px 30px rgba(123, 44, 191, 0.1); /* Sombra */
+  transition: transform 0.3s ease; /* Transición al transformarse */
+  opacity: 0; /* Empieza invisible */
+  transform: translateY(20px); /* Empieza desplazada hacia abajo */
+  animation: fadeInUp 0.8s forwards; /* Animación de entrada */
 }
 
 .card:hover {
-  transform: scale(1.02);
+  transform: scale(1.02); /* Agranda un poco al pasar el mouse */
 }
 
 /* ==== ANIMACIÓN ESCALONADA PARA CARDS ==== */
@@ -135,69 +136,70 @@ p {
 .card:nth-of-type(4) { animation-delay: 0.8s; }
 .card:nth-of-type(5) { animation-delay: 1s; }
 .card:nth-of-type(6) { animation-delay: 1.2s; }
+/* Cada tarjeta aparece con un pequeño retraso */
 
-/* ==== ESTILOS DE FORMULARIOS ==== */
+ /* ==== ESTILOS DE FORMULARIOS ==== */
 input,
 textarea {
-  width: 100%;
-  padding: 0.8rem;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  margin-bottom: 1rem;
-  font-family: 'Quicksand', sans-serif;
+  width: 100%; /* Ancho completo */
+  padding: 0.8rem; /* Relleno interno */
+  border: 1px solid #ccc; /* Borde gris claro */
+  border-radius: 10px; /* Bordes redondeados */
+  margin-bottom: 1rem; /* Separación abajo */
+  font-family: 'Quicksand', sans-serif; /* Fuente consistente */
 }
 
 button {
-  background-color: #7b2cbf;
-  color: white;
-  padding: 0.8rem 1.5rem;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: background-color 0.3s;
+  background-color: #7b2cbf; /* Fondo morado */
+  color: white; /* Texto blanco */
+  padding: 0.8rem 1.5rem; /* Relleno interno */
+  border: none; /* Sin borde */
+  border-radius: 10px; /* Bordes redondeados */
+  cursor: pointer; /* Manita de clic */
+  font-weight: bold; /* Texto en negrita */
+  transition: background-color 0.3s; /* Suaviza el cambio de color */
 }
 
 button:hover {
-  background-color: #1182ec;
+  background-color: #1182ec; /* Cambia a azul al pasar el mouse */
 }
 
 /* ==== FOOTER Y LISTAS ==== */
 footer {
-  text-align: center;
-  margin-top: 3rem;
-  font-size: 0.9rem;
-  color: #888;
+  text-align: center; /* Centra el texto */
+  margin-top: 3rem; /* Espacio arriba */
+  font-size: 0.9rem; /* Tamaño más pequeño */
+  color: #888; /* Color gris claro */
 }
 
 ul {
-  margin-top: 1rem;
-  padding-left: 1.2rem;
-  list-style-type: none;
+  margin-top: 1rem; /* Margen arriba */
+  padding-left: 1.2rem; /* Sangría */
+  list-style-type: none; /* Sin viñetas */
 }
 
 ul li {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.5rem; /* Separación entre elementos */
 }
 
 /* ==== BOTÓN "IR ARRIBA" ==== */
 #scrollTopBtn {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  background-color: #000000;
-  color: rgb(255, 255, 255);
-  border: none;
-  border-radius: 50%;
-  font-size: 1.5rem;
-  padding: 0.8rem 1rem;
-  cursor: pointer;
-  box-shadow: 0 6px 20px rgba(5, 105, 255, 0.3);
-  display: none;
-  z-index: 999;
-  transition: transform 0.3s;
+  position: fixed; /* Siempre visible en la pantalla */
+  bottom: 30px; /* 30px desde abajo */
+  right: 30px; /* 30px desde la derecha */
+  background-color: #000000; /* Fondo negro */
+  color: rgb(255, 255, 255); /* Texto blanco */
+  border: none; /* Sin borde */
+  border-radius: 50%; /* Forma circular */
+  font-size: 1.5rem; /* Tamaño de ícono */
+  padding: 0.8rem 1rem; /* Espaciado interno */
+  cursor: pointer; /* Manita de clic */
+  box-shadow: 0 6px 20px rgba(5, 105, 255, 0.3); /* Sombra azulada */
+  display: none; /* Oculto por defecto */
+  z-index: 999; /* Encima de casi todo */
+  transition: transform 0.3s; /* Animación suave al escalar */
 }
 
 #scrollTopBtn:hover {
-  transform: scale(1.1);
+  transform: scale(1.1); /* Se agranda un poco al pasar el mouse */
 }
