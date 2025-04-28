@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Configuración de caracteres -->
+  <meta charset="UTF-8">
+  
+  <!-- Responsive para móviles -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Portafolio | Fidel Sebastián</title>
+  
+  <!-- Enlace a tu archivo CSS -->
+  <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+
+  <!-- Botón para subir arriba -->
+  <button id="scrollTopBtn" title="Ir arriba">🔝</button>
+
+  <!-- Encabezado de la página -->
+  <header>
+    <!-- Navegación -->
+    <nav id="navegador">
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#lenguajes">Lenguajes</a></li>
+        <li><a href="#futuros">Futuro</a></li>
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#motivacion">¿Por qué?</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <!-- Título principal -->
+    <h1 id="inicio">
+      <!-- Imagen opcional junto al título -->
+      <img src="https://cdn-icons-png.flaticon.com/512/616/616489.png" alt="Estrella" width="40px" style="vertical-align: middle;">
+      Bienvenido a Mi Portafolio
+    </h1>
+    <p>Un espacio creativo donde comparto mis ideas, proyectos y objetivos profesionales.</p>
+  </header>
+
+  <!-- Sección Proyectos -->
+  <section class="card" id="proyectos">
+    <h2>
+      <img src="https://cdn-icons-png.flaticon.com/512/2773/2773124.png" alt="Proyectos" width="30px" style="vertical-align: middle;">
+      Proyectos Destacados
+    </h2>
+    <ul>
+      <li>🎮 Juego de dados en Python</li>
+      <li>📊 Investigaciones contables bilingües (ES/EN)</li>
+      <li>🚀 Prototipos de emprendimiento en sistemas</li>
+    </ul>
+  </section>
+
+  <!-- Sección Lenguajes -->
+  <section class="card" id="lenguajes">
+    <h2>
+      <img src="https://www.dinlazyazilim.com/images/kod.png" alt="Lenguajes" width="30px" style="vertical-align: middle;">
+      Lenguajes que Domino
+    </h2>
+    <ul>
+      <li>🐍 Python</li>
+      <li>🌐 HTML</li>
+      <li>🎨 CSS</li>
+    </ul>
+  </section>
+
+  <!-- Sección Futuro -->
+  <section class="card" id="futuros">
+    <h2>
+      <img src="https://th.bing.com/th/id/OIP.4C41x3TRNN26kLDh0wLNCQHaHa?rs=1&pid=ImgDetMain" alt="Futuro" width="30px" style="vertical-align: middle;">
+      Próximos Objetivos
+    </h2>
+    <ul>
+      <li>Publicar mi primer juego</li>
+      <li>Crear una página web profesional</li>
+      <li>Configurar un servidor para almacenar mis webs</li>
+    </ul>
+  </section>
+
+  <!-- Sección Sobre mí -->
+  <main>
+    <section class="card" id="sobre-mi">
+      <h2>
+        <img src="https://c2.klipartz.com/pngpicture/309/448/sticker-png-professions-and-jobs-icon-programmer-icon-jobs-and-occupations-icon-green-cartoon-glasses-smile.png" alt="Sobre mí" width="30px" style="vertical-align: middle;">
+        Sobre mí
+      </h2>
+      <p>Hola, soy Fidel Sebastián González Gutiérrez, estudiante de Ingeniería en Sistemas. Apasionado por el desarrollo y la tecnología.</p>
+    </section>
+
+    <!-- Sección Motivación -->
+    <section class="card" id="motivacion">
+      <h2>
+        <img src="https://cdn-icons-png.flaticon.com/512/190/190411.png" alt="Motivación" width="30px" style="vertical-align: middle;">
+        ¿Por qué este portafolio?
+      </h2>
+      <p>Para mostrar mis habilidades, proyectos y crecer profesionalmente en el mundo de la programación.</p>
+    </section>
+
+    <!-- Sección Contacto -->
+    <section class="card" id="contacto">
+      <h2>
+        <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="Contacto" width="30px" style="vertical-align: middle;">
+        Contáctame
+      </h2>
+      <p>¿Quieres colaborar conmigo? ¡Escríbeme!</p>
+
+      <!-- Formulario de contacto mejorado -->
+      <form action="mailto:240204016@tecnm.mx" method="post" enctype="text/plain">
+        <input type="text" name="name" placeholder="Tu nombre" pattern="[A-Za-z\s]+" title="Solo letras y espacios" required>
+        <br><br>
+        <input type="email" name="email" placeholder="Tu correo" required>
+        <br><br>
+        <textarea name="message" placeholder="Tu mensaje" rows="4" required></textarea>
+        <br><br>
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Pie de página -->
+  <footer>
+    <p>Hecho con 💜 por Fidel Sebastián González Gutiérrez &copy; 2025</p>
+  </footer>
+
+  <!-- Código para el botón de subir arriba -->
+  <script>
+    const scrollTopBtn = document.getElementById('scrollTopBtn');
+
+    window.onscroll = function () {
+      scrollTopBtn.style.display = (document.documentElement.scrollTop > 100) ? 'block' : 'none';
+    };
+
+    scrollTopBtn.onclick = function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+  </script>
+
+</body>
+</html>
