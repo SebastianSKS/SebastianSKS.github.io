@@ -108,7 +108,8 @@
   </h2>
   <p>¿Quieres colaborar conmigo? ¡Escríbeme!</p>
 
-  <form action="https://formsubmit.co/el/lilofa" method="POST">
+  <!-- Formulario de contacto -->
+  <form id="contact-form">
     <input type="text" name="name" placeholder="Tu nombre" pattern="[A-Za-z\s]+" title="Solo letras y espacios" required>
     <br><br>
     <input type="email" name="email" placeholder="Tu correo" required>
@@ -116,12 +117,33 @@
     <textarea name="message" placeholder="Tu mensaje" rows="4" required></textarea>
     <br><br>
 
-    <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_next" value="https://tu-sitio.com/gracias.html">
-
     <button type="submit">Enviar</button>
   </form>
 </section>
+
+<!-- Script para EmailJS -->
+<script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+  // Inicializar EmailJS con tu User ID
+  (function(){
+    emailjs.init("YOUR_USER_ID"); // Reemplaza "YOUR_USER_ID" con tu "User ID" de EmailJS
+  })();
+
+  // Procesar el formulario
+  document.getElementById("contact-form").addEventListener("submit", function(event){
+    event.preventDefault(); // Prevenir el comportamiento por defecto del formulario
+
+    const formData = new FormData(this);
+
+    emailjs.sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", formData)
+      .then(function(response) {
+        alert("Mensaje enviado con éxito");
+      }, function(error) {
+        alert("Hubo un error al enviar el mensaje");
+      });
+  });
+</script>
+
 
 
 
