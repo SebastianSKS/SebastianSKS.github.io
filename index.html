@@ -100,7 +100,7 @@
       <p>Para mostrar mis habilidades, proyectos y crecer profesionalmente en el mundo de la programación.</p>
     </section>
 
-    <!-- Sección Contacto -->
+  <!-- Sección Contacto -->
 <section class="card" id="contacto">
   <h2>
     <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="Contacto" width="30px" style="vertical-align: middle;">
@@ -135,6 +135,7 @@
 
     const formData = new FormData(this);
 
+    // Enviar el formulario usando EmailJS
     emailjs.sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", formData)
       .then(function(response) {
         alert("Mensaje enviado con éxito");
@@ -143,9 +144,6 @@
       });
   });
 </script>
-
-
-
 
   </main>
 
