@@ -203,3 +203,36 @@ ul li {
 #scrollTopBtn:hover {
   transform: scale(1.1); /* Se agranda un poco al pasar el mouse */
 }
+
+
+
+/* 🎨 BOTÓN flotante modo oscuro */
+#darkModeBtn {
+  position: fixed;       /* Flotante */
+  bottom: 80px;          /* Distancia desde abajo */
+  right: 20px;           /* Distancia desde el borde derecho */
+  z-index: 99999;        /* MUY arriba de todo */
+  background-color: #6c63ff;
+  color: rgb(3, 3, 3);
+  border: none;
+  padding: 12px;
+  border-radius: 50%;
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.3);
+  transition: background-color 0.3s;
+}
+
+#darkModeBtn:hover {
+  background-color: #574fd6;
+}
+
+.dark-mode {
+  background-color: #121212;
+  color: white;
+}
+
+.dark-mode .card {
+  background-color: #1e1e1e;
+  border-color: #050505;
+}

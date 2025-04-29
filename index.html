@@ -13,10 +13,16 @@
   <link rel="stylesheet" href="estilo.css">
 </head>
 
+
 <body>
 
+  
   <!-- Botón para subir arriba -->
-  <button id="scrollTopBtn" title="Ir arriba">🔝</button>
+    <button id="scrollTopBtn" title="Ir arriba">🔝</button>
+  <!-- 🔘 BOTÓN DE MODO OSCURO flotante y visible SIEMPRE -->
+    <button id="darkModeBtn" title="Modo oscuro/claro">🌓</button>
+
+
 
   <!-- Encabezado de la página -->
   <header>
@@ -138,6 +144,19 @@
       window.scrollTo({ top: 0, behavior: 'smooth' });
     };
   </script>
+
+
+  <!-- Código para el botón de oscuro -->
+  <script>
+    const darkModeBtn = document.getElementById('darkModeBtn');
+    darkModeBtn.onclick = function () {
+      document.body.classList.toggle("dark-mode");
+    };
+  </script>
+  
+  
+
+
 
 </body>
 </html>
