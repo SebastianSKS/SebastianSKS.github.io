@@ -265,3 +265,27 @@ p {
 .dark-mode p {
   color: #ffffff;
 }
+
+
+.parrafo-sobre-mi {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #000000;
+}
+
+/* Modo oscuro automático */
+@media (prefers-color-scheme: dark) {
+  .parrafo-sobre-mi {
+    color: #ffffff;
+  }
+}
+
+/* Modo oscuro manual */
+body.dark-mode .parrafo-sobre-mi {
+  color: #000000;
+}
+
+/* Restaurar modo claro */
+body:not(.dark-mode) .parrafo-sobre-mi {
+  color: #000000;
+}
