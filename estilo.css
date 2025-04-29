@@ -19,7 +19,7 @@
 
 body {
   font-family: 'Quicksand', sans-serif; /* Fuente principal */
-  background: linear-gradient(to bottom right, #fef6ff, #e3f2fd); /* Fondo degradado */
+  background: linear-gradient(to bottom right, #ffffff, #e3f2fd); /* Fondo degradado */
   color: #333; /* Color de texto */
   padding: 2rem; /* Espaciado interno */
 }
@@ -42,9 +42,21 @@ h2 {
 }
 
 p {
-  font-size: 1.2rem; /* Tamaño de texto mediano */
-  color: #555; /* Color gris */
-  margin-bottom: 1rem; /* Margen abajo */
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #000000; /* Color predeterminado para modo claro */
+}
+
+/* Modo oscuro automático por preferencia del sistema */
+@media (prefers-color-scheme: dark) {
+  p {
+    color: #ffffff;
+  }
+}
+
+/* Modo oscuro manual usando clase dark-mode */
+.dark-mode p {
+  color: #ffffff;
 }
 
 /* ==== NAV ==== */
@@ -187,7 +199,7 @@ ul li {
   position: fixed; /* Siempre visible en la pantalla */
   bottom: 30px; /* 30px desde abajo */
   right: 30px; /* 30px desde la derecha */
-  background-color: #000000; /* Fondo negro */
+  background-color: #6c63ff; /* Fondo negro */
   color: rgb(255, 255, 255); /* Texto blanco */
   border: none; /* Sin borde */
   border-radius: 50%; /* Forma circular */
@@ -209,8 +221,8 @@ ul li {
 /* 🎨 BOTÓN flotante modo oscuro */
 #darkModeBtn {
   position: fixed;       /* Flotante */
-  bottom: 80px;          /* Distancia desde abajo */
-  right: 20px;           /* Distancia desde el borde derecho */
+  bottom: 100px;          /* Distancia desde abajo */
+  right: 38px;           /* Distancia desde el borde derecho */
   z-index: 99999;        /* MUY arriba de todo */
   background-color: #6c63ff;
   color: rgb(3, 3, 3);
@@ -219,7 +231,7 @@ ul li {
   border-radius: 50%;
   font-size: 18px;
   cursor: pointer;
-  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 8px rgba(0, 51, 255, 0.3);
   transition: background-color 0.3s;
 }
 
@@ -235,4 +247,21 @@ ul li {
 .dark-mode .card {
   background-color: #1e1e1e;
   border-color: #050505;
+}
+
+/* Color de los restantes poxm, sobremi*/
+p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #000000; /* Color en modo claro */
+}
+
+@media (prefers-color-scheme: dark) {
+  p {
+    color: #000000;
+  }
+}
+
+.dark-mode p {
+  color: #ffffff;
 }
