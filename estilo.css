@@ -62,7 +62,7 @@ p {
 /* ==== NAV ==== */
 #navegador {
   width: 100vw; /* Ancho completo del viewport */
-  background: linear-gradient(to right, #d0bfff, #cdb4db, #b5ead7); /* Fondo degradado */
+  background: linear-gradient(to right, #7b2cbf, #ca79f2, #b5ead7); /* Fondo degradado */
   padding: 1rem 0.5rem; /* Relleno */
   box-shadow: 0 8px 30px rgba(123, 44, 191, 0.15); /* Sombra */
   position: sticky; /* Se pega arriba al hacer scroll */
@@ -92,7 +92,7 @@ p {
   text-decoration: none; /* Quita subrayado */
   font-weight: 600; /* Negrita */
   font-size: 1.1rem; /* Tamaño de texto */
-  color: #5e548e; /* Color del enlace */
+  color: #000000; /* Color del enlace */
   padding: 0.5rem 1rem; /* Espaciado interno */
   border-radius: 12px; /* Bordes redondeados */
   transition: all 0.3s ease-in-out; /* Animaciones suaves */
