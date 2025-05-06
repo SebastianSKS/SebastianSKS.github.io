@@ -12,8 +12,6 @@ Puedes visitar mi portafolio web donde muestro:
 - 📊 Investigaciones contables bilingües (ES/EN)
 - 🚀 Prototipos e ideas para emprendimientos tecnológicos
 
-🖥️ **Visítalo aquí:** *(pendiente agregar link)*
-
 ---
 
 ## 🛠️ Tecnologías y Lenguajes
@@ -43,7 +41,7 @@ Me encanta aprender y experimentar con nuevas tecnologías. Creo firmemente en q
 ## 🤝 Conecta Conmigo
 
 ¿Te interesa colaborar o simplemente decir hola?  
-✉️ [240204016@tecnm.mx](mailto:240204016@tecnm.mx)
+✉️ [240204016@tecnm.mx]
 
 ---
 
